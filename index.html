@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MediaPipe Fancy Interaction Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section id="demos">
+    <button id="webcamButton">Enable Webcam</button>
+    <div id="liveView">
+      <video id="webcam" autoplay playsinline></video>
+      <!-- overlay canvas：用于绘制线 / blob / 粒子 -->
+      <canvas id="overlay"></canvas>
+    </div>
+  </section>
+
+  <div id="controlPanel">
+    <label>Hair Width:
+      <input type="range" id="hairWidth" min="0.1" max="5" step="0.1" value="0.9">
+    </label>
+    <label>Glow Max:
+      <input type="range" id="glowMax" min="0" max="150" step="1" value="70">
+    </label>
+    <label>Wave Amp Max:
+      <input type="range" id="waveAmpMax" min="0" max="100" step="1" value="38">
+    </label>
+    <label>Glow Thickness max <input id="baseLineWidthMax" type="range" min="1" max="40" step="1" value="16" /></label>
+    <label>Line Alpha min <input id="minAlpha" type="range" min="0" max="1" step="0.01" value="0.7" /></label>
+    <label>Line Alpha Boost <input id="maxAlphaBoost" type="range" min="0" max="1" step="0.01" value="0.22" /></label>
+    <label>Glow Alpha Base <input id="glowAlphaBase" type="range" min="0" max="1" step="0.01" value="0.7" /></label>
+    <label>Glow Alpha Boost <input id="glowAlphaBoost" type="range" min="0" max="1" step="0.01" value="0.18" /></label>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
